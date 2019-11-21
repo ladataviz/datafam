@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+      <div class="right">
+        <canvas id="graph"></canvas>
+      </div>
+      <div class="left">
+        <div class="center">
+          <span>
+            Have you tweeted <strong>#data19</strong>? Then, let's find
+          </span>
+          <h1>
+            Who are your <br />
+            #DATAFAM ?
+          </h1>
+          <h2>Enter a Twitter handle:</h2>
+          <input id="handle" type="text" /><br/>
+          <span class="share">Share your result on Twitter using #ShareYourDatafam.</span>
+          <h3>Tips</h3>
+          Try clicking or dragging a dot!
+          <br />
+          <br />
+          <h3>Dots</h3>
+          Each dot
+          <svg height="20" width="30">
+            <circle cx="13" cy="9" r="9" fill="#417bbd" />
+          </svg>
+          is a Twitter account. <br />
+          The white dot
+          <svg height="20" width="20">
+            <circle cx="10" cy="9" r="7" fill="white" style="opacity: 0.7;" />
+          </svg>
+          is the input account. <br />
+          The size
+          <svg height="20" width="20">
+            <circle cx="10" cy="15" r="3" fill="none" stroke="#417bbd" />
+            <circle cx="10" cy="12" r="6" fill="none" stroke="#417bbd" />
+            <circle cx="10" cy="10" r="9" fill="none" stroke="#417bbd" />
+          </svg>
+          of the dots indicates the number of tweets.
+          <br />
+          <br />
+          <h3>Lines</h3>
+          Each line
+          <svg height="10" width="20">
+            <line
+              x1="0"
+              y1="5"
+              x2="20"
+              y2="5"
+              stroke="#417bbd"
+              stroke-width="2px"
+            />
+          </svg>
+          is a connection between two accounts.<br />
+          The white lines
+          <svg height="10" width="20">
+            <line
+              x1="0"
+              y1="5"
+              x2="20"
+              y2="5"
+              stroke="white"
+              stroke-width="2px"
+              style="opacity: 0.7;"
+            />
+          </svg>
+          are connections for the input account.<br />
+          A connection is created when an account mentions one another.
+          <br />
+          <br />
+          <i>by Tristan Guillevin
+            <a href="https://twitter.com/ladataviz" target="_blank"
+              >@ladataviz</a
+            ></u
+          >
+          <br />
+          <span class="thanks">
+            Thank you
+            <a href="https://twitter.com/quantum_relic" target="_blank"
+              >Vince Baumel</a
+            >
+            for the data and
+            <a href="https://twitter.com/Wattenberger" target="_blank"
+              >Amelia Wattenberger</a
+            >
+            for teaching me how to do that.
+          </span>
+        </div>
+      </div>
+    <div id="tooltip" class="tooltip">
+      <div class="tooltip-range"><span id="range"></span></div>
+      <div class="tooltip-value"><span id="count"></span> tweets</div>
+    </div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="./chart.js"></script>
+  </body>
+</html>

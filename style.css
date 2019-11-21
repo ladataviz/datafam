@@ -1,0 +1,131 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: benton-sans, sans-serif;
+  background-color: #282e58;
+}
+
+.tooltip {
+  opacity: 0;
+  font-style: normal;
+  font-weight: 100;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  height: 50px;
+  padding: 0em 1em;
+  background: #fff;
+  text-align: center;
+  border: 1px solid #ddd;
+  z-index: 10;
+  transition: all 0.2s ease-out;
+  pointer-events: none;
+}
+
+.tooltip:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: translate(-50%, 50%) rotate(45deg);
+  transform-origin: center center;
+  z-index: 10;
+}
+
+.tooltip-range {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+}
+
+.right {
+  position: absolute;
+  width: 60%;
+  float: left;
+  margin-right: 5%;
+  margin-left: 35%;
+  z-index: 10;
+}
+
+.left {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #417bbd;
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 10%;
+  margin: auto;
+  height: 680px;
+}
+
+.left h1 {
+  margin-top: 0px;
+  padding-top: 5px;
+  font-weight: 700;
+  font-stretch: extra-expanded;
+  font-size: 60px;
+  z-index: 11;
+}
+
+p {
+  font-size: 15px;
+}
+
+.share {
+  font-size: 12px;
+  margin-bottom: 35px;
+}
+
+h2 {
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 0px;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  opacity: 0.7;
+  padding-left: 5px;
+  margin-top: 10px;
+  font-size: 20px;
+  border: none;
+  height: 40px;
+}
+
+input[type="text"]:focus {
+  border-color: #417bbd;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(66, 123, 189, 0.6);
+}
+
+.thanks {
+  font-size: 12px;
+}
+
+a {
+  color: #417bbd;
+  text-decoration: underline;
+}
